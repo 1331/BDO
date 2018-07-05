@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 Route::get("testando", function(){
 	dd(\DB::select('select * from bdodsv.empresa'));
 });
@@ -46,4 +36,8 @@ Route::group(['prefix' => 'bancodeoportunidades'], function() {
             Route::put('{id}', ['as' => 'candidates.update', 'uses' => 'CandidateController@update']);
             Route::delete('{id}', ['as' => 'candidates.destroy', 'uses' => 'CandidateController@destroy']);
         });
+
+		Route::group(['prefix' => 'manual'], function(){
+			Route::get('faq',['as' => 'manuals.faq', 'uses' => 'ManualController@faq']);
+		});
 });

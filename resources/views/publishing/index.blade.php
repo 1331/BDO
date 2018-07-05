@@ -76,7 +76,10 @@
 								</table>
 							</form>
 						</fieldset>
+
+
 					</div>
+
 					<div class="login-index-area login-empresa">
 						<fieldset class="fieldset-index">
 							<legend><i class="fa fa-building margin-right-5" aria-hidden="true"></i>LOGIN DE EMPRESAS</legend>
@@ -148,6 +151,7 @@
 							<img alt="Banco de Oportunidades" src="./imagens/logo_banco.png" width="250">
 						</div>
 					</div>
+
 					<table class="table-footer-vagas">
 						<tbody>
 							<tr>
@@ -171,9 +175,10 @@
 							Ver mais
 						</a>
 					</div>
+
 					<div class="div-info-redesociais">
 						<div class="pull-left">
-							<a href="./publico/visao/GuiFaq.php" class="div-box div-box-hover pull-left margin-top-5 link-default font-blue01">
+							<a href="{{ route('manuals.faq')}}" class="div-box div-box-hover pull-left margin-top-5 link-default font-blue01">
 								<i class="fa fa-question-circle fa-2x margin-right-5" aria-hidden="true"></i>
 								Perguntas Frequentes
 							</a>
@@ -184,37 +189,30 @@
 								Política de Privacidade
 							</a>
 						</div>
-
-			<div class="pull-right div-rss">
-				<a target="_blank" href="http://www.canoas.rs.gov.br/rss.xml" title="RSS" alt="RSS">
-					<i class="fa fa-rss-square fa-3x" aria-hidden="true"></i>
-				</a>
-			</div>
-
-			<div class="pull-right div-youtube">
-				<a target="_blank" href="http://www.youtube.com/secomcanoas" title="Youtube" alt="Youtube">
-					<i class="fa fa-youtube-square fa-3x pull-right" aria-hidden="true"></i>
-				</a>
-			</div>
-
-			<div class="pull-right div-facebook">
-				<a target="_blank" href="https://www.facebook.com/PrefeituradeCanoas" title="Facebook" alt="Facebook">
-					<i class="fa fa-facebook-official fa-3x pull-right" aria-hidden="true"></i>
-				</a>
-			</div>
-
-			<div class="pull-right div-twitter">
-				<a target="_blank" href="http://www.twitter.com/prefcanoas" title="Twitter" alt="Twitter">
-					<i class="fa fa-twitter-square fa-3x pull-right" aria-hidden="true"></i>
-				</a>
+						<div class="pull-right div-rss">
+							<a target="_blank" href="http://www.canoas.rs.gov.br/rss.xml" title="RSS" alt="RSS">
+								<i class="fa fa-rss-square fa-3x" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="pull-right div-youtube">
+							<a target="_blank" href="http://www.youtube.com/secomcanoas" title="Youtube" alt="Youtube">
+								<i class="fa fa-youtube-square fa-3x pull-right" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="pull-right div-facebook">
+							<a target="_blank" href="https://www.facebook.com/PrefeituradeCanoas" title="Facebook" alt="Facebook">
+								<i class="fa fa-facebook-official fa-3x pull-right" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="pull-right div-twitter">
+							<a target="_blank" href="http://www.twitter.com/prefcanoas" title="Twitter" alt="Twitter">
+								<i class="fa fa-twitter-square fa-3x pull-right" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<br>
+				</div>
 			</div>
 		</div>
-		<br>
 	</div>
-</div>
-</div>
-</div>
-
 @extends('layout.main.footer')
-</body>
-</html>

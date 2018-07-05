@@ -16,7 +16,7 @@ class FaqService{
         return $this->faqRepository->findAll();
     }
 
-    public function findByStatus($status){
+    public function findByStatus($status){print_r("teste");exit();
         return $this->faqRepository->findByStatus($status);
     }
 }
