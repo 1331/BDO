@@ -1,0 +1,126 @@
+.table-header-vagas, .table-header-todasvagas{ width: 100%; border-collapse: collapse; font-size: 12px; }
+.table-header-vagas thead th, .table-header-todasvagas thead th{ padding: 10px; border: 1px solid #CCC; color: #006b85; background: #F7F7F9; }
+.table-header-vagas tbody td, .table-header-todasvagas tbody td{ padding: 10px; text-align: center; border: 1px solid #CCC; background: #006b85; color: #FFF; }
+.table-header-vagas tbody td:nth-child(1){ width: 50%; border-left-color: #006b85; }
+.table-header-vagas tbody td:nth-child(2){ width: 25%; border-right-color: #CCC; }
+.table-header-vagas tbody td:nth-child(3), .table-header-todasvagas tbody td:nth-child(3){ width: 25%; border-right-color: #006b85; }
+
+.table-header-todasvagas tbody td:nth-child(1){ width: 60%; border-left-color: #006b85; }
+.table-header-todasvagas tbody td:nth-child(2){ width: 15%; border-left-color: #CCC; }
+
+.table-footer-vagas{ width: 100%; border-collapse: collapse; font-size: 12px; }
+.table-footer-vagas td{ background: #F7F7F9; padding: 12px; border-bottom: 1px solid #CCC; border-left: 1px solid #CCC; border-right: 1px solid #CCC; }
+
+
+.table-index-vagas td:nth-child(1){ width: 51%; border-left: none; }
+.table-index-vagas td:nth-child(2){ width: 25.6%; }
+
+.table-index-todasvagas td:nth-child(1){ width: 60%; border-left: none; }
+.table-index-todasvagas td:nth-child(2){ width: 15%; }
+.table-index-todasvagas td:nth-child(3){ width: 25%; }
+
+.login-index-area{ width: 47.2%; float: left; margin-bottom: 35px;}
+.login-empresa { margin-left: 52px; }
+
+.table-login-index{ width: 100%; }
+.table-login-index input[type='text'], .table-login-index input[type='password'], .table-login-index select, .table-login-index textarea{ 
+    border: 1px solid #CCC; padding: 10px; border-radius: 3px; font-size: 13px; width: 100%;
+}
+.table-login-index tr td:nth-child(1){ width: 15%; font-size: 14px; cursor: default; }
+.table-login-index button{
+    display: inline-flex; 
+    align-items: center; 
+    line-height: 40px; 
+    padding: 0px 10px;
+    background: #119d93;
+    color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+.table-login-index button:hover{ cursor: pointer; background: #007071; color: #FFF; }
+.table-login-index label:hover{ cursor: pointer; }
+.table-login-index a{ text-decoration: none; color: #838B8B; font-size: 13px; font-weight: bold;}
+.table-login-index a:hover{ text-decoration: underline; color: #006b85; }
+.table-login-index .alert-index{
+    position: relative;
+    width: 59.8%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    float: right;
+    margin: 2px 5px 0 0;    
+}
+
+.fieldset-index{ border-radius: 3px; border: 2px solid #119d93; }
+.fieldset-index legend { font-size: 14px; color: #838B8B; cursor: default; font-weight: bold; }
+
+.btn-cadastro-index{
+    width: 50%;
+    float: left;
+    text-align: center;
+    margin: 30px 0;    
+}
+
+.btn-cadastro-index a, .btn-faleconosco-vermais-index a{
+    background: #119d93;
+    color: #FFF;
+}
+
+.btn-cadastro-index a:hover, .btn-faleconosco-vermais-index a:hover{ background: #007071; }
+.btn-hover-blue01:hover{ background: #007071; color: #FFF; }
+
+.btn-faleconosco-vermais-index{    
+    width: 100%;
+    display: inline-block;    
+}
+
+.index-descricao{
+    margin-top: 50px;    
+}
+
+.index-descricao h2{
+    color: #006B85;
+    background: #F9F9F9;
+    padding: 10px;
+    border-left: 5px solid #006B85;
+    border-radius: 5px;
+}
+
+.index-descricao p{
+    text-align: justify;
+    padding: 0 30px;
+}
+
+.index-descricao-todasvagas h2{
+    color: #006B85;
+    background: #F9F9F9;
+    padding: 10px;
+    border-left: 5px solid #006B85;
+    border-radius: 3px;
+}
+
+.index-descricao-todasvagas p{
+    text-align: justify;
+    padding: 0 30px;
+}
+
+.div-info-redesociais{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.div-rss{ margin-left: 12px; }
+.div-rss a{ color: #F58432; }
+.div-youtube a{ color: #DF2926; }
+.div-facebook a{ color: #3B5998; }
+.div-twitter a{ color: #1DA1F2; }
+
+.div-login-centro{ margin-left: 215px; }
+
+.version-rodape{ display: inline-block; background: #E8E8E8; } 
