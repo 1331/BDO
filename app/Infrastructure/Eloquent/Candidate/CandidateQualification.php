@@ -1,10 +1,10 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Candidate;
+<?php
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\User\User;
-use App\Infrastructure\Eloquent\Candidate\Candidate;
-use App\Domain\Candidate\CandidateQualificationInterface;
+use BDO\Infrastructure\Eloquent\User\User;
+use BDO\Infrastructure\Eloquent\Candidate\Candidate;
+use BDO\Domain\Candidate\CandidateQualificationInterface;
 
 class CandidateQualification extends Model implements CandidateQualificationInterface {
 
@@ -18,9 +18,9 @@ class CandidateQualification extends Model implements CandidateQualificationInte
 
     public $witch = ['candidate','userChange', 'userInclusion'];
 
-    public function candidate(){ 
-        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato'); 
-    } 
+    public function candidate(){
+        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato');
+    }
 
     public function userChange(){
         return $this->hasOne(User::class, 'id_usuario', 'id_usuarioalteracao');
@@ -36,7 +36,7 @@ class CandidateQualification extends Model implements CandidateQualificationInte
 
     public function getCandidate(){
         return $this->candidate;
-    } 
+    }
 
     public function getUserChange(){
         return $this->userChange;
@@ -57,19 +57,19 @@ class CandidateQualification extends Model implements CandidateQualificationInte
     public function getAmountHour(){
         return $this->qtd_horas;
     }
-    
+
     public function getDateInclusion(){
         return $this->dt_inclusao;
     }
-    
+
     public function getDateChange(){
         return $this->dt_alteracao;
     }
-    
+
     public function hasQualification(){
         return $this->ao_qualificacao;
     }
-    
+
     public function getNameInstitution(){
         return $this->nm_instituicao;
     }

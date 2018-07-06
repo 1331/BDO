@@ -1,14 +1,14 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Profession\ProfessionRepositoryInterface;
+use BDO\Repositories\Profession\ProfessionRepositoryInterface;
 
 
 class ProfessionMapper{
 
     /** @var ProfessionRepositoryInterface */
     private $professionRepository;
-    
+
     public function __construct(ProfessionRepositoryInterface $professionRepository){
         $this->professionRepository = $professionRepository;
     }

@@ -1,13 +1,13 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Profession;
+<?php
+namespace BDO\Infrastructure\Eloquent\Profession;
 
-use App\Domain\Status\Status;
+use BDO\Domain\Status\Status;
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\User\User;
-use App\Domain\Profession\ProfessionInterface;
-use App\Infrastructure\Eloquent\Vacancy\Vacancy;
+use BDO\Infrastructure\Eloquent\User\User;
+use BDO\Domain\Profession\ProfessionInterface;
+use BDO\Infrastructure\Eloquent\Vacancy\Vacancy;
 
-class Profession extends Model implements ProfessionInterface 
+class Profession extends Model implements ProfessionInterface
 {
 
     protected $table = 'profissao';
@@ -36,7 +36,7 @@ class Profession extends Model implements ProfessionInterface
 
     public function getName(){
         return $this->nm_profissao;
-    } 
+    }
 
     public function isActive(){
         return $this->ao_ativo;
@@ -44,7 +44,7 @@ class Profession extends Model implements ProfessionInterface
 
     public function getDateInclusion(){
         return $this->dt_inclusao;
-    } 
+    }
 
     public function getUserInclusion(){
         return $this->userInclusion;
@@ -56,7 +56,7 @@ class Profession extends Model implements ProfessionInterface
 
     public function getDateChange(){
         return $this->dt_inclusao;
-    } 
+    }
 
     public function getDescription(){
         return $this->ds_profissao;

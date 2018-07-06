@@ -1,8 +1,8 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Deficiency;
+<?php
+namespace BDO\Infrastructure\Eloquent\Deficiency;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\User\User;
+use BDO\Infrastructure\Eloquent\User\User;
 
 class Deficiency extends Model {
 
@@ -30,7 +30,7 @@ class Deficiency extends Model {
 
     public function getName(){
         return $this->nm_deficiencia;
-    } 
+    }
 
     public function getUserChange(){
         return $this->userChange;
@@ -46,7 +46,7 @@ class Deficiency extends Model {
 
     public function getDateChange(){
         return $this->dt_alteracao;
-    }  
+    }
 
     public function toArray(){
         return [

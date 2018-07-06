@@ -1,9 +1,9 @@
 <?php
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Carbon\Carbon;
-use App\Repositories\Candidate\CandidateProfessionRepositoryInterface;
-use App\Infrastructure\Eloquent\Candidate\CandidateProfession;
+use BDO\Repositories\Candidate\CandidateProfessionRepositoryInterface;
+use BDO\Infrastructure\Eloquent\Candidate\CandidateProfession;
 
 
 class CandidateProfessionRepository implements CandidateProfessionRepositoryInterface{
@@ -13,7 +13,7 @@ class CandidateProfessionRepository implements CandidateProfessionRepositoryInte
   public function __construct(CandidateProfession $eloquent){
     $this->eloquent = $eloquent;
   }
-  
+
 public function create(CandidateProfession $candidateProfession){
     $candidateProfession->save();
     return $candidateProfession->id_candidatoprofissao;
@@ -27,7 +27,7 @@ public function create(CandidateProfession $candidateProfession){
   public function findOrNew($id = null){
     if($id)
       return $this->eloquent->findOrFail($id);
-    
+
     return $this->eloquent->newInstance();
   }
 
@@ -38,5 +38,5 @@ public function create(CandidateProfession $candidateProfession){
   public function newInstanceEmpty(){
     return $this->eloquent->newInstance();
   }
-  
+
 }

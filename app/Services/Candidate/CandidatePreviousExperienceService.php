@@ -1,10 +1,10 @@
 <?php
-namespace App\Services\Candidate;
+namespace BDO\Services\Candidate;
 
-use App\Domain\Tabs\Tabs;
-use App\Mapper\CandidatePreviousExperienceMapper;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
-use App\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
+use BDO\Domain\Tabs\Tabs;
+use BDO\Mapper\CandidatePreviousExperienceMapper;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
 
 class CandidatePreviousExperienceService{
 
@@ -48,5 +48,5 @@ class CandidatePreviousExperienceService{
 
         return $candidate;
     }
-   
+
 }

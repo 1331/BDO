@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Candidate;
+namespace BDO\Domain\Candidate;
 
 class CandidateStatus{
 

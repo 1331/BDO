@@ -1,10 +1,10 @@
 <?php
-namespace App\Services\Candidate;
+namespace BDO\Services\Candidate;
 
-use App\Domain\Tabs\Tabs;
-use App\Mapper\CandidateQualificationMapper;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
-use App\Repositories\Candidate\CandidateQualificationRepositoryInterface;
+use BDO\Domain\Tabs\Tabs;
+use BDO\Mapper\CandidateQualificationMapper;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateQualificationRepositoryInterface;
 
 class CandidateQualificationService{
 
@@ -54,5 +54,5 @@ class CandidateQualificationService{
 
         return $candidate;
     }
-   
+
 }

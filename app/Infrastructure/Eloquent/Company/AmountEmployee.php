@@ -1,5 +1,5 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Company;
+<?php
+namespace BDO\Infrastructure\Eloquent\Company;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class AmountEmployee extends Model {
 
     public function getName(){
         return $this->nm_quantidadefuncionario;
-    } 
+    }
 
     public function toArray(){
         return [

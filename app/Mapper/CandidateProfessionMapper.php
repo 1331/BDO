@@ -1,13 +1,13 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Candidate\CandidateProfessionRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateProfessionRepositoryInterface;
 
 class CandidateProfessionMapper{
 
     /** @var CandidateProfessionRepositoryInterface */
     private $candidateProfessionRepository;
-    
+
     public function __construct(CandidateProfessionRepositoryInterface $candidateProfessionRepository){
         $this->candidateProfessionRepository = $candidateProfessionRepository;
     }
@@ -24,8 +24,8 @@ class CandidateProfessionMapper{
                 $collectionCandidateProfession = array();
                 foreach($arrayModel['profession'] as $idProfession){
                     $objectCandidateProfession = $this->candidateProfessionRepository->newInstanceEmpty();
-                    $objectCandidateProfession->id_candidato = $arrayModel['candidate'];        
-                    $objectCandidateProfession->id_profissao = $idProfession;     
+                    $objectCandidateProfession->id_candidato = $arrayModel['candidate'];
+                    $objectCandidateProfession->id_profissao = $idProfession;
                     $collectionCandidateProfession[] = $objectCandidateProfession;
                 }
                 return $collectionCandidateProfession;

@@ -1,10 +1,10 @@
 <?php
-namespace App\Services\Candidate;
+namespace BDO\Services\Candidate;
 
 use Ixudra\Curl\Facades\Curl;
-use App\Mapper\CandidateMapper;
-use App\Infrastructure\Eloquent\Candidate\Candidate;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Mapper\CandidateMapper;
+use BDO\Infrastructure\Eloquent\Candidate\Candidate;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
 
 class CandidateService{
 
@@ -22,7 +22,7 @@ class CandidateService{
     public function create(Array $candidateData){
         $candidate = $this->candidateMapper->mapper($candidateData);
         $candidate = $this->validateRegisterBasic($candidate);
-        
+
         return $this->candidateRepository->create($candidate);
     }
 
@@ -89,7 +89,7 @@ class CandidateService{
     private function validateRegisterBasic($candidate){
         if(empty($candidate->getName()))
             throw new \DomainException("Nome é obrigatório");
-        
+
         if(empty($candidate->getEmail()))
             throw new \DomainException("Email é obrigatório");
 
@@ -100,10 +100,10 @@ class CandidateService{
             throw new \DomainException("Data de nascimento é obrigatório.");
 
         if(empty($candidate->getLoginPortal()))
-            throw new \DomainException("Nome de usuário é obrigatório.");    
+            throw new \DomainException("Nome de usuário é obrigatório.");
 
         if(empty($candidate->getPasswordPortal()))
-            throw new \DomainException("Senha do usuario é obrigatório.");  
+            throw new \DomainException("Senha do usuario é obrigatório.");
 
         return $candidate;
     }
@@ -117,5 +117,5 @@ class CandidateService{
 
         return $candidate;
     }
-   
+
 }

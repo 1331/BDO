@@ -3,21 +3,25 @@
 namespace BDO\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Domain\Faq\FaqStatus;
-use App\Services\Faq\FaqService;
+use BDO\Domain\Faq\FaqStatus;
+use BDO\Repositories\Faq\FaqRepositoryInterface;
 
 class ManualController extends Controller{
 
-	/** @var FaqService */
-    private $faqService;
+	/** @var FaqRepositoryInterface */
+    private $faqRepository;
 
-	public function __construct(FaqService $faqService){
-        $this->faqService = $faqService;
-print_r("teste");exit();
+	public function __construct(FaqRepositoryInterface $faqRepository){
+		$this->faqRepository = $faqRepository;
+
     }
 
 	public function faq(){
-		$CommonQuestions = $this->faqService->findByStatus(FaqStatus::ACTIVE);
+		$CommonQuestions = $this->faqRepository->findByStatus(FaqStatus::ACTIVE);
 		return view('manuals.faq', compact('CommonQuestions'));
+	}
+
+	public function privacy(){
+		return view('manuals.privacy');
 	}
 }

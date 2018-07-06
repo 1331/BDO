@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Profession;
+namespace BDO\Domain\Profession;
 
 class ProfessionStatus{
 	const ACTIVE = 'S';

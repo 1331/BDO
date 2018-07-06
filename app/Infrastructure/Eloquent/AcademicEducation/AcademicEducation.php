@@ -1,5 +1,5 @@
-<?php 
-namespace App\Infrastructure\Eloquent\AcademicEducation;
+<?php
+namespace BDO\Infrastructure\Eloquent\AcademicEducation;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class AcademicEducation extends Model {
 
     public function getName(){
         return $this->nm_formacao;
-    } 
+    }
 
     public function toArray(){
         return [

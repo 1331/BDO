@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Candidate;
+<?php
+namespace BDO\Domain\Candidate;
 
 interface CandidateQualificationInterface {
 
@@ -44,25 +44,25 @@ interface CandidateQualificationInterface {
 	 * @return int
      */
     public function getAmountHour();
-    
+
     /**
      * Gets the DateInclusion
 	 * @return \Carbon\Carbon
      */
     public function getDateInclusion();
-    
+
     /**
      * Gets the DateChange
 	 * @return \Carbon\Carbon
      */
     public function getDateChange();
-    
+
     /**
      * Gets the Has qualification
 	 * @return string
      */
     public function hasQualification();
-    
+
     /**
      * Gets the Name Institution
 	 * @return string
@@ -79,5 +79,5 @@ interface CandidateQualificationInterface {
      * Gets an array with the datas formated for view
 	 * @return \Illuminate\Support\Collection
      */
-    public function toArray();  
+    public function toArray();
 }

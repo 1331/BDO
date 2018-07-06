@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Util;
+namespace BDO\Util;
 
 use Carbon\Carbon;
 
@@ -8,7 +8,7 @@ use Carbon\Carbon;
 class FormatDate{
 
     public function __construct(){}
-    
+
     public static function getDateUs($date){
         if(count(explode('-', $date)) == 3 ){
             return $date;

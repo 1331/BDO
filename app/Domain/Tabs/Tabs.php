@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Tabs;
+namespace BDO\Domain\Tabs;
 
 class Tabs {
     const ACADEMIC_EDUCATION = 2;

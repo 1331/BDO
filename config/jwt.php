@@ -75,7 +75,7 @@ return [
     |
     */
 
-    'user' => App\Infrastructure\Eloquent\Candidate\Candidate::class,
+    'user' => BDO\Infrastructure\Eloquent\Candidate\Candidate::class,
 
     /*
     |--------------------------------------------------------------------------

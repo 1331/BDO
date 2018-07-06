@@ -1,7 +1,7 @@
 <?php
-namespace App\Services\Vacancy;
+namespace BDO\Services\Vacancy;
 
-use App\Repositories\Vacancy\VacancyRepositoryInterface;
+use BDO\Repositories\Vacancy\VacancyRepositoryInterface;
 
 class VacancyService{
 
@@ -32,5 +32,5 @@ class VacancyService{
     public function sumVacancyActive(){
         return $this->vacancyRepository->count();
     }
-   
+
 }

@@ -1,10 +1,10 @@
 <?php
-namespace App\Services\Candidate;
+namespace BDO\Services\Candidate;
 
-use App\Domain\Tabs\Tabs;
-use App\Mapper\CandidateAcademicEducationMapper;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
-use App\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
+use BDO\Domain\Tabs\Tabs;
+use BDO\Mapper\CandidateAcademicEducationMapper;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
 
 class CandidateAcademicEducationService{
 
@@ -22,7 +22,7 @@ class CandidateAcademicEducationService{
         $this->candidateAcademicEducationMapper = $candidateAcademicEducationMapper;
         $this->candidateRepository = $candidateRepository;
     }
-    
+
     public function findAcademicEducation($id){
         return $this->candidateAcademicEducationRepository->findByCandidate($id);
     }
@@ -54,7 +54,7 @@ class CandidateAcademicEducationService{
 
         if(empty($candidate->getAcademicEducation()))
             throw new \DomainException("Escolaridade inválida.");
-            
+
         if($candidate->getAcademicEducation()->getId() != $academicEducationIlliterate ){
             if(in_array($candidate->getAcademicEducation()->getId(), $academicEducationDone) ){
                 if(empty($candidate->getDateEnd()))
@@ -65,11 +65,11 @@ class CandidateAcademicEducationService{
                 throw new \DomainException("Nome da escola é obrigatório.");
 
             if(empty($candidate->getNameCitySchool()))
-                throw new \DomainException("Cidade da escola é obrigatório."); 
+                throw new \DomainException("Cidade da escola é obrigatório.");
 
         }
 
         return $candidate;
     }
-   
+
 }

@@ -1,9 +1,9 @@
 <?php
-namespace App\Infrastructure\Eloquent\Faq;
+namespace BDO\Infrastructure\Eloquent\Faq;
 
 use Carbon\Carbon;
 use App\Domain\Faq\FaqStatus;
-use App\Repositories\Faq\FaqRepositoryInterface;
+use BDO\Repositories\Faq\FaqRepositoryInterface;
 
 
 class FaqRepository implements FaqRepositoryInterface{
@@ -18,7 +18,7 @@ class FaqRepository implements FaqRepositoryInterface{
     return $this->eloquent->findAll();
   }
 
-  public function findByStatus($status) {print_r("teste");exit();
+  public function findByStatus($status) {
     return $this->eloquent->where('ao_ativo', $status)->get();
   }
 

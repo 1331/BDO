@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace BDO\Http\Requests;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 
 class CandidateRequest extends Request
 {
-    
+
     public function rules(){
         $candidate = $this->json()->all();
         $id = null;
@@ -19,19 +19,19 @@ class CandidateRequest extends Request
         return Validator::make($this->json()->all(), [
             'name' => 'required',
             'email' => [
-                'required', 
-                Rule::unique('candidato', 'ds_email')->ignore($id, 'id_candidato') 
+                'required',
+                Rule::unique('candidato', 'ds_email')->ignore($id, 'id_candidato')
             ],
             'cpf' => [
                 'required',
                 'size:14',
-                Rule::unique('candidato', 'nr_cpf')->ignore($id, 'id_candidato') 
+                Rule::unique('candidato', 'nr_cpf')->ignore($id, 'id_candidato')
             ],
             'dateBirth' => 'required|size:10',
             'loginPortal' =>[
                 'required',
                 'max:45',
-                Rule::unique('candidato', 'ds_loginportal')->ignore($id, 'id_candidato') 
+                Rule::unique('candidato', 'ds_loginportal')->ignore($id, 'id_candidato')
             ],
             'passwordPortal' => 'required'
 
@@ -49,4 +49,3 @@ class CandidateRequest extends Request
     }
 
 }
-

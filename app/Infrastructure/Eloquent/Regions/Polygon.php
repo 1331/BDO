@@ -1,5 +1,5 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Regions;
+<?php
+namespace BDO\Infrastructure\Eloquent\Regions;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class Polygon extends Model {
 
     public function getName(){
         return $this->nm_poligono;
-    } 
+    }
 
     public function toArray(){
         return [

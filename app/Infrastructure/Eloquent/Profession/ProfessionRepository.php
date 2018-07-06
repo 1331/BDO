@@ -1,9 +1,9 @@
 <?php
-namespace App\Infrastructure\Eloquent\Profession;
+namespace BDO\Infrastructure\Eloquent\Profession;
 
 use Carbon\Carbon;
-use App\Domain\Profession\ProfessionStatus;
-use App\Repositories\Profession\ProfessionRepositoryInterface;
+use BDO\Domain\Profession\ProfessionStatus;
+use BDO\Repositories\Profession\ProfessionRepositoryInterface;
 
 
 class ProfessionRepository implements ProfessionRepositoryInterface{
@@ -26,7 +26,7 @@ class ProfessionRepository implements ProfessionRepositoryInterface{
     $name = rawurldecode($name);
     return $this->eloquent->where('nm_profissao', 'LIKE', "%$name%")->get();
   }
-      
+
   public function create(Profession $profession){
     $profession->dt_inclusao = Carbon::now();
     $profession->dt_alteracao = Carbon::now();

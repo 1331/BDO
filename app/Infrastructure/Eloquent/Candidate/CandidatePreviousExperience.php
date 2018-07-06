@@ -1,10 +1,10 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Candidate;
+<?php
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\User\User;
-use App\Infrastructure\Eloquent\Candidate\Candidate;
-use App\Domain\Candidate\CandidatePreviousExperienceInterface;
+use BDO\Infrastructure\Eloquent\User\User;
+use BDO\Infrastructure\Eloquent\Candidate\Candidate;
+use BDO\Domain\Candidate\CandidatePreviousExperienceInterface;
 
 class CandidatePreviousExperience extends Model implements CandidatePreviousExperienceInterface {
 
@@ -18,9 +18,9 @@ class CandidatePreviousExperience extends Model implements CandidatePreviousExpe
 
     public $witch = ['candidate','userChange', 'userInclusion'];
 
-    public function candidate(){ 
-        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato'); 
-    } 
+    public function candidate(){
+        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato');
+    }
 
     public function userChange(){
         return $this->hasOne(User::class, 'id_usuario', 'id_usuarioalteracao');
@@ -36,7 +36,7 @@ class CandidatePreviousExperience extends Model implements CandidatePreviousExpe
 
     public function getCandidate(){
         return $this->candidate;
-    } 
+    }
 
     public function getUserChange(){
         return $this->userChange;
@@ -57,19 +57,19 @@ class CandidatePreviousExperience extends Model implements CandidatePreviousExpe
     public function getNameCompany(){
         return $this->nm_empresa;
     }
-    
-    public function getDescriptionActivities(){ 
+
+    public function getDescriptionActivities(){
         return $this->ds_atividades;
     }
 
     public function getDateInclusion(){
         return $this->dt_inclusao;
     }
-    
+
     public function getDateChange(){
         return $this->dt_alteracao;
     }
-    
+
     public function hasPreviousExperience(){
         return $this->ao_experiencia;
     }

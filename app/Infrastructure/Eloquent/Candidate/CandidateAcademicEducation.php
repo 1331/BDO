@@ -1,11 +1,11 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Candidate;
+<?php
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\User\User;
-use App\Infrastructure\Eloquent\Candidate\Candidate;
-use App\Domain\Candidate\CandidateAcademicEducationInterface;
-use App\Infrastructure\Eloquent\AcademicEducation\AcademicEducation;
+use BDO\Infrastructure\Eloquent\User\User;
+use BDO\Infrastructure\Eloquent\Candidate\Candidate;
+use BDO\Domain\Candidate\CandidateAcademicEducationInterface;
+use BDO\Infrastructure\Eloquent\AcademicEducation\AcademicEducation;
 
 class CandidateAcademicEducation extends Model implements CandidateAcademicEducationInterface {
 
@@ -19,13 +19,13 @@ class CandidateAcademicEducation extends Model implements CandidateAcademicEduca
 
     public $witch = ['candidate', 'profession','userChange', 'userInclusion'];
 
-    public function candidate(){ 
-        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato'); 
-    } 
+    public function candidate(){
+        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato');
+    }
 
-    public function academicEducation(){ 
-        return $this->hasOne(AcademicEducation::class, 'id_formacao', 'id_formacao'); 
-    } 
+    public function academicEducation(){
+        return $this->hasOne(AcademicEducation::class, 'id_formacao', 'id_formacao');
+    }
 
     public function userChange(){
         return $this->hasOne(User::class, 'id_usuario', 'id_usuarioalteracao');
@@ -41,11 +41,11 @@ class CandidateAcademicEducation extends Model implements CandidateAcademicEduca
 
     public function getCandidate(){
         return $this->candidate;
-    } 
+    }
 
     public function getAcademicEducation(){
         return $this->academicEducation;
-    } 
+    }
 
     public function getUserChange(){
         return $this->userChange;
@@ -66,19 +66,19 @@ class CandidateAcademicEducation extends Model implements CandidateAcademicEduca
     public function getNameCitySchool(){
         return $this->ds_cidadeescola;
     }
-    
+
     public function getDateInclusion(){
         return $this->dt_inclusao;
     }
-    
+
     public function getDateChange(){
         return $this->dt_alteracao;
     }
-    
+
     public function getCourse(){
         return $this->ds_curso;
     }
-    
+
     public function getAcademicSemester(){
         return $this->ds_semestre;
     }

@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\Cbo\Cbo;
-use App\Infrastructure\Eloquent\City\City;
-use App\Infrastructure\Eloquent\User\User;
-use App\Domain\Candidate\CandidateInterface;
-use App\Infrastructure\Eloquent\State\State;
-use App\Infrastructure\Eloquent\Deficiency\Deficiency;
-use App\Infrastructure\Eloquent\Neighborhood\Neighborhood;
+use BDO\Infrastructure\Eloquent\Cbo\Cbo;
+use BDO\Infrastructure\Eloquent\City\City;
+use BDO\Infrastructure\Eloquent\User\User;
+use BDO\Domain\Candidate\CandidateInterface;
+use BDO\Infrastructure\Eloquent\State\State;
+use BDO\Infrastructure\Eloquent\Deficiency\Deficiency;
+use BDO\Infrastructure\Eloquent\Neighborhood\Neighborhood;
 
 use Illuminate\Auth\Authenticatable;
 use Laravel\Lumen\Auth\Authorizable;
@@ -30,12 +30,12 @@ class Candidate extends Model implements CandidateInterface, JWTSubject, Authent
 
     protected $witch = ['cbo', 'deficiency', 'neighborhood', 'city', 'stateCtps', 'userChange', 'userInclusion'];
 
-    public function cbo(){ 
-        return $this->hasOne(Cbo::class, 'id_cbo', 'id_cbo'); 
-    } 
-    
-    public function deficiency(){ 
-        return $this->hasOne(Deficiency::class, 'id_deficiencia', 'id_deficiencia'); 
+    public function cbo(){
+        return $this->hasOne(Cbo::class, 'id_cbo', 'id_cbo');
+    }
+
+    public function deficiency(){
+        return $this->hasOne(Deficiency::class, 'id_deficiencia', 'id_deficiencia');
     }
 
     public function neighborhood(){
@@ -81,7 +81,7 @@ class Candidate extends Model implements CandidateInterface, JWTSubject, Authent
     public function getId(){
         return $this->id_candidato;
     }
-    
+
     public function getName(){
         return $this->nm_candidato;
     }
@@ -137,7 +137,7 @@ class Candidate extends Model implements CandidateInterface, JWTSubject, Authent
     public function getDistrict(){
         return $this->ds_bairro;
     }
-    
+
     public function getCity(){
         return $this->city;
     }
@@ -251,7 +251,7 @@ class Candidate extends Model implements CandidateInterface, JWTSubject, Authent
             'isActive'                  => $this->isActive(),
             'dateBirth'                 => $this->getDateBirth()->toDateString(),
             'loginPortal'               => $this->getLoginPortal(),
-            'passwordPortal'            => $this->getPasswordPortal(), 
+            'passwordPortal'            => $this->getPasswordPortal(),
             'cbo'                       => $this->getCbo(),
             'deficiency'                => $this->getDeficiency(),
             'houseNumber'               => $this->getHouseNumber(),

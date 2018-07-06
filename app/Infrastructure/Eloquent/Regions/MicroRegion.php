@@ -1,5 +1,5 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Regions;
+<?php
+namespace BDO\Infrastructure\Eloquent\Regions;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,11 +18,11 @@ class MicroRegion extends Model {
 
     public function getName(){
         return $this->nm_microregiao;
-    } 
+    }
 
     public function getQuadrant(){
         return $this->id_quadrante;
-    } 
+    }
 
     public function toArray(){
         return [

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Login;
+namespace BDO\Domain\Login;
 
 class LoginUserType{
 	const CANDIDATE = 1;

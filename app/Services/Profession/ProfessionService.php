@@ -1,8 +1,8 @@
 <?php
-namespace App\Services\Profession;
+namespace BDO\Services\Profession;
 
-use App\Mapper\ProfessionMapper;
-use App\Repositories\Profession\ProfessionRepositoryInterface;
+use BDO\Mapper\ProfessionMapper;
+use BDO\Repositories\Profession\ProfessionRepositoryInterface;
 
 class ProfessionService{
 
@@ -21,7 +21,7 @@ class ProfessionService{
 
         $profession = $this->professionMapper->mapper($professionData);
         $profession = $this->validateData($profession);
-        
+
         return $this->professionRepository->create($profession);
     }
 
@@ -43,5 +43,5 @@ class ProfessionService{
 
         return $profession;
     }
-   
+
 }

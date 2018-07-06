@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Faq;
+namespace BDO\Domain\Faq;
 
 class FaqStatus{
 	const ACTIVE = 'S';

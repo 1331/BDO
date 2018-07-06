@@ -39,5 +39,6 @@ Route::group(['prefix' => 'bancodeoportunidades'], function() {
 
 		Route::group(['prefix' => 'manual'], function(){
 			Route::get('faq',['as' => 'manuals.faq', 'uses' => 'ManualController@faq']);
+			Route::get('politica-de-privacidade',['as' => 'manuals.privacy', 'uses' => 'ManualController@privacy']);
 		});
 });

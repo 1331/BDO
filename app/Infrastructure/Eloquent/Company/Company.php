@@ -1,13 +1,13 @@
 <?php
-namespace App\Infrastructure\Eloquent\Company;
+namespace BDO\Infrastructure\Eloquent\Company;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Domain\Company\CompanyInterface;
-use App\Infrastructure\Eloquent\Regions\Polygon;
-use App\Infrastructure\Eloquent\Company\CompanyType;
-use App\Infrastructure\Eloquent\Regions\MicroRegion;
-use App\Infrastructure\Eloquent\Company\AmountEmployee;
-use App\Infrastructure\Eloquent\ActivyBranch\ActivyBranch;
+use BDO\Domain\Company\CompanyInterface;
+use BDO\Infrastructure\Eloquent\Regions\Polygon;
+use BDO\Infrastructure\Eloquent\Company\CompanyType;
+use BDO\Infrastructure\Eloquent\Regions\MicroRegion;
+use BDO\Infrastructure\Eloquent\Company\AmountEmployee;
+use BDO\Infrastructure\Eloquent\ActivyBranch\ActivyBranch;
 
 class Company extends Model implements CompanyInterface{
 
@@ -34,7 +34,7 @@ class Company extends Model implements CompanyInterface{
     public function amountEmployee(){
         return $this->hasOne(AmountEmployee::class, 'id_quantidadefuncionario', 'id_quantidadefuncionario');
     }
-    
+
     public function microRegiao(){
         return $this->hasOne(MicroRegion::class, 'id_microregiao', 'id_microregiao');
     }

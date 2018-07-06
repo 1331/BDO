@@ -1,13 +1,13 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Candidate\CandidateQualificationRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateQualificationRepositoryInterface;
 
 class CandidateQualificationMapper{
 
     /** @var CandidateQualificationRepositoryInterface */
     private $candidateQualificationRepository;
-    
+
     public function __construct(CandidateQualificationRepositoryInterface $candidateQualificationRepository){
         $this->candidateQualificationRepository = $candidateQualificationRepository;
     }
@@ -15,7 +15,7 @@ class CandidateQualificationMapper{
     private $attributes = array(
         "id"                        => "id_qualificacao",
         "candidate"                 => "id_candidato",
-        "userChange"                => "id_usuarioalteracao", 
+        "userChange"                => "id_usuarioalteracao",
         "userInclusion"             => "id_usuarioinclusao",
         "descriptionQualification"  => "ds_qualificacao",
         "dateEnd"                   => "dt_termino",

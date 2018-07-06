@@ -1,5 +1,5 @@
-<?php 
-namespace App\Infrastructure\Eloquent\ActivyBranch;
+<?php
+namespace BDO\Infrastructure\Eloquent\ActivyBranch;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,7 +18,7 @@ class ActivyBranch extends Model {
 
     public function getName(){
         return $this->nm_ramoatividade;
-    } 
+    }
 
     public function toArray(){
         return [

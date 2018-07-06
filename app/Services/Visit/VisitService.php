@@ -1,8 +1,8 @@
 <?php
-namespace App\Services\Visit;
+namespace BDO\Services\Visit;
 
-use App\Mapper\VisitMapper;
-use App\Repositories\Visit\VisitRepositoryInterface;
+use BDO\Mapper\VisitMapper;
+use BDO\Repositories\Visit\VisitRepositoryInterface;
 
 
 class VisitService{

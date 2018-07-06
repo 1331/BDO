@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Domain\VacancyCandidate;
+namespace BDO\Domain\VacancyCandidate;
 
 interface VacancyCandidateInterface{
-    
+
     /**
      * Gets the id of the vacancy
 	 * @return int

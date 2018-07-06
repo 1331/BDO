@@ -11,16 +11,23 @@
 					<div style="width: 100%;">
 						<div class="div-icones-index">
 							<i class="fa fa-building-o fa-4x" aria-hidden="true" title="Empresas Cadastradas"></i>
-							{{-- {{  }} --}}
+							<div class='div-numero-index'>{{ $company }}</div>
+							Empresa
 						</div>
 						<div class="div-icones-index">
-							<i class="fa fa-id-card-o fa-4x" aria-hidden="true" title="Total de curr�culos Cadastrados"></i>
+							<i class="fa fa-id-card-o fa-4x" aria-hidden="true" title="Total de currículos Cadastrados"></i>
+							<div class='div-numero-index'>{{ $company }}</div>
+							Currículos
 						</div>
 						<div class="div-icones-index">
 							<a href="#vagas" class="link-default font-blue01"><i class="fa fa-users fa-4x" aria-hidden="true" title="Total de Vagas Cadastradas"></i></a>
+							<div class='div-numero-index'>{{ $vacancy }}</div>
+							Vagas
 						</div>
 						<div class="div-icones-index">
 							<i class="fa fa-eye fa-4x" aria-hidden="true" title="Visitas"></i>
+							<div class='div-numero-index'>{{ $visit }}</div>
+							Visitas
 						</div>
 					</div>
 
@@ -139,7 +146,7 @@
 					<div id="scroll" style="height: 350px; overflow: scroll; overflow-x: hidden; border: 1px solid #CCC;" >
 						<br><br><br><br><br><br><br><br><br><br>
 						<div class="width100 text-center">
-							<img alt="Banco de Oportunidades" src="./imagens/logo_banco.png" width="250">
+							<img alt="Banco de Oportunidades" src="{{ asset('/img/logo_banco.png')}}" width="250">
 						</div>
 						<br><br><br><br><br><br><br><br>
 						<table class="table-index table-striped table-index-vagas">
@@ -148,7 +155,7 @@
 						</table>
 						<br><br><br><br><br><br><br><br><br><br><br><br><br>
 						<div class="width100 text-center">
-							<img alt="Banco de Oportunidades" src="./imagens/logo_banco.png" width="250">
+							<img alt="Banco de Oportunidades" src="{{ asset('/img/logo_banco.png')}}" width="250">
 						</div>
 					</div>
 
@@ -184,7 +191,7 @@
 							</a>
 						</div>
 						<div class="pull-left">
-							<a href="./publico/visao/GuiPoliticaPrivacidade.php" class="div-box div-box-hover pull-left margin-top-5 link-default font-blue01 margin-left-5">
+							<a href="{{ route('manuals.privacy')}}" class="div-box div-box-hover pull-left margin-top-5 link-default font-blue01 margin-left-5">
 								<i class="fa fa-lock fa-2x margin-right-5" aria-hidden="true"></i>
 								Política de Privacidade
 							</a>

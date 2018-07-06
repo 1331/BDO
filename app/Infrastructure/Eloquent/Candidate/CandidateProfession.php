@@ -1,10 +1,10 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Candidate;
+<?php
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Infrastructure\Eloquent\Candidate\Candidate;
-use App\Infrastructure\Eloquent\Profession\Profession;
-use App\Domain\Candidate\CandidateProfessionInterface;
+use BDO\Infrastructure\Eloquent\Candidate\Candidate;
+use BDO\Infrastructure\Eloquent\Profession\Profession;
+use BDO\Domain\Candidate\CandidateProfessionInterface;
 
 class CandidateProfession extends Model implements CandidateProfessionInterface {
 
@@ -16,9 +16,9 @@ class CandidateProfession extends Model implements CandidateProfessionInterface 
 
     public $witch = ['candidate', 'profession'];
 
-    public function candidate(){ 
-        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato'); 
-    } 
+    public function candidate(){
+        return $this->hasOne(Candidate::class, 'id_candidato', 'id_candidato');
+    }
 
     public function profession(){
         return $this->hasOne(Profession::class, 'id_profissao', 'id_profissao');
@@ -30,11 +30,11 @@ class CandidateProfession extends Model implements CandidateProfessionInterface 
 
     public function getCandidate(){
         return $this->candidate;
-    } 
+    }
 
     public function getProfession(){
         return $this->profession;
-    } 
+    }
 
     public function toArray(){
         return [

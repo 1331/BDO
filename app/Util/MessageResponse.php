@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Util;
+namespace BDO\Util;
 
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;

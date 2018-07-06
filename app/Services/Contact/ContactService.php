@@ -1,8 +1,8 @@
 <?php
-namespace App\Services\Contact;
+namespace BDO\Services\Contact;
 
-use App\Mapper\ContactMapper;
-use App\Repositories\Contact\ContactRepositoryInterface;
+use BDO\Mapper\ContactMapper;
+use BDO\Repositories\Contact\ContactRepositoryInterface;
 
 class ContactService{
 
@@ -35,7 +35,7 @@ class ContactService{
     private function validateMessage($contact){
         if(empty($contact->getName()))
             throw new \DomainException("Nome é obrigatório.");
-        
+
         if(empty($contact->getEmail()))
             throw new \DomainException("Email é obrigatório.");
 
@@ -43,8 +43,8 @@ class ContactService{
             throw new \DomainException("Assunto é obrigatório.");
 
         if(empty($contact->getMessageContent()))
-            throw new \DomainException("Deve haver conteudo na mensagem."); 
+            throw new \DomainException("Deve haver conteudo na mensagem.");
 
         return $contact;
-    }   
+    }
 }

@@ -1,11 +1,11 @@
 <?php
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Carbon\Carbon;
-use App\Domain\Tabs\Tabs;
-use App\Domain\Status\Status;
-use App\Domain\Candidate\CandidateStatus;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Domain\Tabs\Tabs;
+use BDO\Domain\Status\Status;
+use BDO\Domain\Candidate\CandidateStatus;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
 
 class CandidateRepository implements CandidateRepositoryInterface{
   /** @var Candidate */
@@ -22,18 +22,18 @@ class CandidateRepository implements CandidateRepositoryInterface{
   public function find($id){
     return $this->eloquent->findOrFail($id);
   }
-      
+
   public function create(Candidate $candidate){
     $candidate = $this->createDates($candidate);
     $candidate->ao_interno = CandidateStatus::STAY;
     $candidate->save();
-    return $candidate->id_candidato;  
+    return $candidate->id_candidato;
   }
 
   public function findOrNew($id = null){
     if($id)
       return $this->find($id);
-    
+
     return $this->eloquent->newInstance();
   }
 
@@ -65,7 +65,7 @@ class CandidateRepository implements CandidateRepositoryInterface{
     if($candidate->ao_abaqualificacao == Status::ACTIVE && $candidate->ao_abaformacao == Status::ACTIVE && $candidate->ao_abaexperiencia == Status::ACTIVE){
       $candidate->ao_ativo = Status::ACTIVE;
     }
-    
+
     return $candidate->save();
   }
 

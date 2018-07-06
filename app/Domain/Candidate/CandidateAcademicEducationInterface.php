@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Candidate;
+<?php
+namespace BDO\Domain\Candidate;
 
 interface CandidateAcademicEducationInterface {
 
@@ -50,25 +50,25 @@ interface CandidateAcademicEducationInterface {
 	 * @return string
      */
     public function getNameCitySchool();
-    
+
     /**
      * Gets the DateInclusion
 	 * @return \Carbon\Carbon
      */
     public function getDateInclusion();
-    
+
     /**
      * Gets the DateChange
 	 * @return \Carbon\Carbon
      */
     public function getDateChange();
-    
+
     /**
      * Gets the Course
 	 * @return string
      */
     public function getCourse();
-    
+
     /**
      * Gets the AcademicSemester
 	 * @return int
@@ -79,5 +79,5 @@ interface CandidateAcademicEducationInterface {
      * Gets an array with the datas formated for view
 	 * @return \Illuminate\Support\Collection
      */
-    public function toArray();  
+    public function toArray();
 }

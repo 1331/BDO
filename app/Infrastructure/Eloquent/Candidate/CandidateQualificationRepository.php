@@ -1,8 +1,8 @@
 <?php
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
-use App\Infrastructure\Eloquent\Candidate\CandidateQualification;
-use App\Repositories\Candidate\CandidateQualificationRepositoryInterface;
+use BDO\Infrastructure\Eloquent\Candidate\CandidateQualification;
+use BDO\Repositories\Candidate\CandidateQualificationRepositoryInterface;
 
 class CandidateQualificationRepository implements CandidateQualificationRepositoryInterface{
 
@@ -12,7 +12,7 @@ class CandidateQualificationRepository implements CandidateQualificationReposito
   public function __construct(CandidateQualification $eloquent){
     $this->eloquent = $eloquent;
   }
-  
+
 public function create(CandidateQualification $candidateQualification){
     $candidateQualification->save();
     return $candidateQualification->id_qualificacao;
@@ -26,7 +26,7 @@ public function create(CandidateQualification $candidateQualification){
   public function findOrNew($id = null){
     if($id)
       return $this->eloquent->findOrFail($id);
-    
+
     return $this->eloquent->newInstance();
   }
 
@@ -37,5 +37,5 @@ public function create(CandidateQualification $candidateQualification){
   public function newInstanceEmpty(){
     return $this->eloquent->newInstance();
   }
-  
+
 }

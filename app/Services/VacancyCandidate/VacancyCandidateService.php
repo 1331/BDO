@@ -1,7 +1,7 @@
 <?php
-namespace App\Services\VacancyCandidate;
+namespace BDO\Services\VacancyCandidate;
 
-use App\Repositories\VacancyCandidate\VacancyCandidateRepositoryInterface;
+use BDO\Repositories\VacancyCandidate\VacancyCandidateRepositoryInterface;
 
 class VacancyCandidateService{
 
@@ -23,5 +23,5 @@ class VacancyCandidateService{
     public function findAll(){
         return $this->vacancyCandidateRepository->all();
     }
-   
+
 }

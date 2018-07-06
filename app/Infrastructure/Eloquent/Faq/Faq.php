@@ -1,7 +1,7 @@
-<?php 
-namespace App\Infrastructure\Eloquent\Faq;
+<?php
+namespace BDO\Infrastructure\Eloquent\Faq;
 
-use App\Domain\Faq\FaqInterface;
+use BDO\Domain\Faq\FaqInterface;
 use Illuminate\Database\Eloquent\Model;
 use App\Infrastructure\Eloquent\User\User;
 
@@ -51,11 +51,11 @@ class Faq extends Model implements FaqInterface {
 
     public function getQuestion(){
         return $this->ds_pergunta;
-    } 
+    }
 
     public function getAnswer(){
         return $this->ds_resposta;
-    } 
+    }
 
     public function toArray(){
         return [

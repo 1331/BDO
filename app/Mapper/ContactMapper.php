@@ -1,14 +1,14 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Contact\ContactRepositoryInterface;
+use BDO\Repositories\Contact\ContactRepositoryInterface;
 
 
 class ContactMapper{
 
     /** @var ContactRepositoryInterface */
     private $contactRepository;
-    
+
     public function __construct(ContactRepositoryInterface $contactRepository){
         $this->contactRepository = $contactRepository;
     }
@@ -27,13 +27,13 @@ class ContactMapper{
     public function mapper($arrayModel){
         if(isset($arrayModel["subject"]))
             $arrayModel["subject"] = $this->translateSubject($arrayModel["subject"]);
-        
+
         $objectContact = $this->contactRepository->newInstanceEmpty();
         foreach($arrayModel as $key => $value){
             $columnBase = $this->attributes[$key];
             $objectContact->${'columnBase'} = strtoupper($value);
         }
-        
+
         return $objectContact;
     }
 

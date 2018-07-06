@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Text;
+<?php
+namespace BDO\Domain\Text;
 
 interface TextInterface {
 

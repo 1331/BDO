@@ -1,8 +1,8 @@
 <?php
-namespace App\Services\Candidate;
+namespace BDO\Services\Candidate;
 
-use App\Mapper\CandidateProfessionMapper;
-use App\Repositories\Candidate\CandidateProfessionRepositoryInterface;
+use BDO\Mapper\CandidateProfessionMapper;
+use BDO\Repositories\Candidate\CandidateProfessionRepositoryInterface;
 
 class CandidateProfessionService{
 
@@ -27,7 +27,7 @@ class CandidateProfessionService{
 
     public function attachJobRole(Array $candidateProfessionData){
         $candidateProfession = $this->candidateProfessionMapper->mapper($candidateProfessionData);
-        
+
         if(is_array($candidateProfession)){
             return $this->attachMultipleJobRole($candidateProfession);
         }else{
@@ -47,18 +47,18 @@ class CandidateProfessionService{
         }
         if(count($id))
             return json_encode($id);
-            
+
         throw new \DomainException("Informe quais os cargos pretendido pelo candidato.");
     }
 
     private function validateData($candidate){
         if(empty($candidate->getCandidate()))
             throw new \DomainException("Informe o ID do candidato.");
-        
+
         if(empty($candidate->getProfession()))
             throw new \DomainException("Informe quais os cargos pretendido pelo candidato.");
 
         return $candidate;
-    }   
+    }
 
 }

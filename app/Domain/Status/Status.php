@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Status;
+namespace BDO\Domain\Status;
 
 class Status{
 	const ACTIVE = 'S';

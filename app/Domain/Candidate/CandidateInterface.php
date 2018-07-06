@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Candidate;
+namespace BDO\Domain\Candidate;
 
 interface CandidateInterface {
 
@@ -71,7 +71,7 @@ interface CandidateInterface {
     public function getMaritalStatus();
 
     /**
-     * Gets the date Birth of candidate 
+     * Gets the date Birth of candidate
 	 * @return Carbon\Carbon
      */
     public function getDateBirth();
@@ -209,7 +209,7 @@ interface CandidateInterface {
     public function isInternal();
 
     /**
-     * Gets the CNH 
+     * Gets the CNH
 	 * @return string
      */
     public function getCnh();
@@ -255,5 +255,5 @@ interface CandidateInterface {
 	 * @return int
      */
     public function hasTabAcademicEducation();
-  
+
 }

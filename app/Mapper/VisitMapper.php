@@ -1,14 +1,14 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Visit\VisitRepositoryInterface;
+use BDO\Repositories\Visit\VisitRepositoryInterface;
 
 
 class VisitMapper{
 
     /** @var VisitRepositoryInterface */
     private $visitRepository;
-    
+
     public function __construct(VisitRepositoryInterface $visitRepository){
         $this->visitRepository = $visitRepository;
     }

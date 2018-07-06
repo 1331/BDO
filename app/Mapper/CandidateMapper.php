@@ -1,15 +1,15 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Util\FormatDate;
-use App\Repositories\Candidate\CandidateRepositoryInterface;
+use BDO\Util\FormatDate;
+use BDO\Repositories\Candidate\CandidateRepositoryInterface;
 
 
 class CandidateMapper{
 
     /** @var CandidateRepositoryInterface */
     private $candidateRepository;
-    
+
     public function __construct(CandidateRepositoryInterface $candidateRepository){
         $this->candidateRepository = $candidateRepository;
     }
@@ -29,7 +29,7 @@ class CandidateMapper{
         "city"                      => "id_cidade",
         "stateCtps"                 => "id_estadoctps",
         "userInclusion"             => "id_usuarioinclusao",
-        "userChange"                => "id_usuarioalteracao", 
+        "userChange"                => "id_usuarioalteracao",
         "phoneFixed"                => "nr_telefone",
         "phoneMobile"               => "nr_celular",
         "maritalStatus"             => "ds_estado_civil",
@@ -65,7 +65,7 @@ class CandidateMapper{
         $objectCandidate = $this->candidateRepository->findOrNew($id);
         foreach($arrayModel as $key => $value){
             $columnBase = $this->attributes[$key];
-            
+
             //If attribute is a date, then use function to format a date in american standard
             if(strpos($columnBase,'dt_') !== false){
                 $value = FormatDate::getDateUs($value);

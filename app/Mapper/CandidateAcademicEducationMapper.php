@@ -1,14 +1,14 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
 
 
 class CandidateAcademicEducationMapper{
 
     /** @var CandidateAcademicEducationRepositoryInterface */
     private $candidateAcademicEducationRepository;
-    
+
     public function __construct(CandidateAcademicEducationRepositoryInterface $candidateAcademicEducationRepository){
         $this->candidateAcademicEducationRepository = $candidateAcademicEducationRepository;
     }
@@ -17,7 +17,7 @@ class CandidateAcademicEducationMapper{
         "id"                => "id_candidato_formacao",
         "candidate"         => "id_candidato",
         "academicEducation" => "id_formacao",
-        "userChange"        => "id_usuarioalteracao", 
+        "userChange"        => "id_usuarioalteracao",
         "userInclusion"     => "id_usuarioinclusao",
         "dateEnd"           => "dt_termino",
         "nameSchool"        => "nm_escola",

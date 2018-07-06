@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Faq;
+<?php
+namespace BDO\Domain\Faq;
 
 interface FaqInterface {
 

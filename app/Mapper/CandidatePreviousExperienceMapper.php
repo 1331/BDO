@@ -1,20 +1,20 @@
 <?php
-namespace App\Mapper;
+namespace BDO\Mapper;
 
-use App\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
+use BDO\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
 
 class CandidatePreviousExperienceMapper{
 
     /** @var CandidatePreviousExperienceRepositoryInterface */
     private $candidatePreviousExperienceRepository;
-    
+
     public function __construct(CandidatePreviousExperienceRepositoryInterface $candidatePreviousExperienceRepository){
         $this->candidatePreviousExperienceRepository = $candidatePreviousExperienceRepository;
     }
 
     private $attributes = array(
         "id"                    => "id_experiencia",
-        "userChange"            => "id_usuarioalteracao", 
+        "userChange"            => "id_usuarioalteracao",
         "userInclusion"         => "id_usuarioinclusao",
         "candidate"             => "id_candidato",
         "dateStart"             => "dt_inicio",

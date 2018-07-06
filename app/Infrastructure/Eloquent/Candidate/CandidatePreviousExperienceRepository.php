@@ -1,8 +1,8 @@
 <?php
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
-use App\Infrastructure\Eloquent\Candidate\CandidatePreviousExperience;
-use App\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
+use BDO\Infrastructure\Eloquent\Candidate\CandidatePreviousExperience;
+use BDO\Repositories\Candidate\CandidatePreviousExperienceRepositoryInterface;
 
 class CandidatePreviousExperienceRepository implements CandidatePreviousExperienceRepositoryInterface{
 
@@ -12,7 +12,7 @@ class CandidatePreviousExperienceRepository implements CandidatePreviousExperien
   public function __construct(CandidatePreviousExperience $eloquent){
     $this->eloquent = $eloquent;
   }
-  
+
 public function create(CandidatePreviousExperience $candidatePreviousExperience){
     $candidatePreviousExperience->save();
     return $candidatePreviousExperience->id_experiencia;
@@ -26,7 +26,7 @@ public function create(CandidatePreviousExperience $candidatePreviousExperience)
   public function findOrNew($id = null){
     if($id)
       return $this->eloquent->findOrFail($id);
-    
+
     return $this->eloquent->newInstance();
   }
 
@@ -37,5 +37,5 @@ public function create(CandidatePreviousExperience $candidatePreviousExperience)
   public function newInstanceEmpty(){
     return $this->eloquent->newInstance();
   }
-  
+
 }

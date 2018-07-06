@@ -1,7 +1,7 @@
 <?php
-namespace App\Infrastructure\Eloquent\Company;
+namespace BDO\Infrastructure\Eloquent\Company;
 
-use App\Repositories\Company\CompanyRepositoryInterface;
+use BDO\Repositories\Company\CompanyRepositoryInterface;
 
 
 class CompanyRepository implements CompanyRepositoryInterface{
@@ -15,11 +15,11 @@ class CompanyRepository implements CompanyRepositoryInterface{
   public function all() {
     // TODO : montar function
   }
-  
+
   public function find($id){
     // TODO : montar function
   }
-  
+
   public function count(){
     return $this->eloquent->count();
   }

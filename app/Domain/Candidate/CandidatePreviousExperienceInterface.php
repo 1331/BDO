@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Candidate;
+<?php
+namespace BDO\Domain\Candidate;
 
 interface CandidatePreviousExperienceInterface {
 
@@ -44,7 +44,7 @@ interface CandidatePreviousExperienceInterface {
 	 * @return string
      */
     public function getNameCompany();
-    
+
     /**
      * Gets the description activies
 	 * @return string
@@ -56,13 +56,13 @@ interface CandidatePreviousExperienceInterface {
 	 * @return \Carbon\Carbon
      */
     public function getDateInclusion();
-    
+
     /**
      * Gets the DateChange
 	 * @return \Carbon\Carbon
      */
     public function getDateChange();
-    
+
     /**
      * Gets the has previous experience
 	 * @return string
@@ -73,5 +73,5 @@ interface CandidatePreviousExperienceInterface {
      * Gets an array with the datas formated for view
 	 * @return \Illuminate\Support\Collection
      */
-    public function toArray();  
+    public function toArray();
 }

@@ -1,7 +1,7 @@
 <?php
-namespace App\Services\Text;
+namespace BDO\Services\Text;
 
-use App\Repositories\Text\TextRepositoryInterface;
+use BDO\Repositories\Text\TextRepositoryInterface;
 
 class TextService{
 

@@ -1,5 +1,5 @@
-<?php 
-namespace App\Domain\Visit;
+<?php
+namespace BDO\Domain\Visit;
 
 
 interface VisitInterface{

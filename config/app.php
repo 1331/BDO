@@ -176,6 +176,7 @@ return [
         BDO\Providers\BroadcastServiceProvider::class,
         BDO\Providers\EventServiceProvider::class,
         BDO\Providers\RouteServiceProvider::class,
+		BDO\Providers\InjectionServiceProvider::class,
 
     ],
 

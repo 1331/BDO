@@ -1,8 +1,8 @@
 <?php
-namespace App\Infrastructure\Eloquent\Candidate;
+namespace BDO\Infrastructure\Eloquent\Candidate;
 
 use Carbon\Carbon;
-use App\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
+use BDO\Repositories\Candidate\CandidateAcademicEducationRepositoryInterface;
 
 
 class CandidateAcademicEducationRepository implements CandidateAcademicEducationRepositoryInterface{
@@ -12,7 +12,7 @@ class CandidateAcademicEducationRepository implements CandidateAcademicEducation
   public function __construct(CandidateAcademicEducation $eloquent){
     $this->eloquent = $eloquent;
   }
-  
+
 public function create(CandidateAcademicEducation $candidateAcademicEducation){
     $candidateAcademicEducation->save();
     return $candidateAcademicEducation->id_candidato_formacao;
@@ -26,7 +26,7 @@ public function create(CandidateAcademicEducation $candidateAcademicEducation){
   public function findOrNew($id = null){
     if($id)
       return $this->eloquent->findOrFail($id);
-    
+
     return $this->eloquent->newInstance();
   }
 
@@ -37,5 +37,5 @@ public function create(CandidateAcademicEducation $candidateAcademicEducation){
   public function newInstanceEmpty(){
     return $this->eloquent->newInstance();
   }
-  
+
 }

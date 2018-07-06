@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Contact;
+namespace BDO\Domain\Contact;
 
 interface ContactInterface {
 
@@ -51,5 +51,5 @@ interface ContactInterface {
 	 * @return Carbon\Carbon
      */
     public function getDateInsert();
- 
+
 }

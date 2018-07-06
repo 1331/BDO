@@ -1,9 +1,9 @@
-<?php 
+<?php
 
-namespace App\Domain\Profession;
+namespace BDO\Domain\Profession;
 
 interface ProfessionInterface {
-    
+
     /**
      * Gets the id of the profession
 	 * @return int
