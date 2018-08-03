@@ -57,7 +57,7 @@ function validarCPF(campo) {
         a[10] = 11 - x;
     }
     if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10])) {
-        erro += "CPF Invï¿½lido!";
+        erro += "CPF Inválido!";
         document.getElementById('nr_cpf').value = "";
         document.getElementById("nr_cpf").focus();
         document.getElementById("nr_cpf").select();
@@ -529,12 +529,12 @@ function confirmarDeleteFormacao() {
     var ids = $('.marcar').is(":checked");
     if (ids) {
         var flag;
-        flag = window.confirm("Vocï¿½ deseja apagar esta formaï¿½ï¿½o?");
+        flag = window.confirm("Você deseja apagar esta formação?");
         if (flag) {
             document.deletarFormacao.submit();
         }
     } else {
-        alert("Selecione no mï¿½nimo uma formaï¿½ï¿½o!");
+        alert("Selecione no mínimo uma formação!");
     }
 }
 
@@ -543,12 +543,12 @@ function confirmarDeleteQualificacao() {
     var ids = $('.mQua').is(":checked");
     if (ids) {
         var flag;
-        flag = window.confirm("Vocï¿½ deseja apagar esta qualificaï¿½ï¿½o?");
+        flag = window.confirm("Você deseja apagar esta qualificação?");
         if (flag) {
             document.deletarQualificacao.submit();
         }
     } else {
-        alert("Selecione no mï¿½nimo uma qualificaï¿½ï¿½o!");
+        alert("Selecione no mínimo uma qualificação!");
     }
 }
 
@@ -557,12 +557,12 @@ function confirmarDeleteExperiencia() {
     var ids = $('.mExp').is(":checked");
     if (ids) {
         var flag;
-        flag = window.confirm("Vocï¿½ deseja apagar esta experiï¿½ncia?");
+        flag = window.confirm("Você deseja apagar esta experiência?");
         if (flag) {
             document.deletarExperiencia.submit();
         }
     } else {
-        alert("Selecione no mï¿½nimo uma experiï¿½ncia!");
+        alert("Selecione no mínimo uma experiência!");
     }
 }
 
@@ -671,13 +671,13 @@ function validaDataEmpresa(val, campo) {
     var mes = data[1];
     var ano = data[2];
     if ((ano <= 0) || (mes > 12 || mes == 0) || (dia > 31 || dia == 0)) {
-        alert('Data Invï¿½lida');
+        alert('Data Inválida');
     } else if (((ano % 4) == 0) && (mes == 2) && (dia > 29)) {
-        alert('Data Invï¿½lida');
+        alert('Data Inválida');
     } else if (((ano % 4) > 0) && (mes == 2) && (dia > 28)) {
-        alert('Data Invï¿½lida');
+        alert('Data Inválida');
     } else if (((mes == 4) || (mes == 6) || (mes == 9) || (mes == 11)) && (dia == 31)) {
-        alert('Data Invï¿½lida');
+        alert('Data Inválida');
     } else {
         return true;
     }
@@ -969,7 +969,7 @@ function verificarSelectEnc(vem_do, id, vc, status, id_vaga, id_interno) {
         return false;
     } else if (document.getElementById('id_motivoEnc_' + id).value === 'Outros') {
         if (document.getElementById('ds_motivoEnc_' + id).value === '') {
-            alert("Informe uma descriï¿½ï¿½o de motivo!");
+            alert("Informe uma descrição de motivo!");
             return false;
         }
     }
@@ -1012,7 +1012,7 @@ function verificarSelectPre(vem_do, id, vc, status, id_vaga, id_interno) {
         return false;
     } else if (document.getElementById('id_motivoPre_' + id).value === 'Outros') {
         if (document.getElementById('ds_motivoPre_' + id).value === '') {
-            alert("Informe uma descriï¿½ï¿½o de motivo!");
+            alert("Informe uma descrição de motivo!");
             return false;
         }
     }
@@ -1101,8 +1101,8 @@ function alterarStatus(vem_do, vc, status, id_vaga, id_interno) {
                     atualizaQtdCandidatosPre(vem_do, status);
                     atualizaQtdCandidatosCon(vem_do, status);
                     atualizaQtdCandidatosDis(vem_do, status);
-                    $('#pre_t_' + vc).html("Candidato prï¿½-selecionado");
-                    $('#pre_e_' + vc).html("Candidato prï¿½-selecionado");
+                    $('#pre_t_' + vc).html("Candidato pré-selecionado");
+                    $('#pre_e_' + vc).html("Candidato pré-selecionado");
                     $('#linha_pre_t_' + vc).css('background', '#D1EEEE');
                     $('#linha_pre_e_' + vc).css('background', '#D1EEEE');
                     setTimeout(function () {
@@ -1157,7 +1157,7 @@ function alterarStatus(vem_do, vc, status, id_vaga, id_interno) {
                 }
             });
         } else {
-            alert('Nï¿½o ï¿½ possï¿½vel fazer novas contrataï¿½ï¿½es. Favor alterar a quantidade de vagas!');
+            alert('Não é possível fazer novas contratações. Favor alterar a quantidade de vagas!');
         }
 
         //$('input[name=buscar]').click();
@@ -1170,7 +1170,7 @@ function verificarSelect(vem_do, id, vc, status, id_vaga, id_interno) {
         return false;
     } else if (document.getElementById('id_motivo_' + id).value === 'Outros') {
         if (document.getElementById('ds_motivo_' + id).value === '') {
-            alert("Informe uma descriï¿½ï¿½o de motivo!");
+            alert("Informe uma descrição de motivo!");
             return false;
         }
     }
@@ -1650,9 +1650,9 @@ function mostrarProfissao() {
 
 function inativarVaga() {
 
-    var pergunta = "VOCï¿½ TEM CERTEZA QUE DESEJA INATIVAR A VAGA?";
+    var pergunta = "Você TEM CERTEZA QUE DESEJA INATIVAR A VAGA?";
     pergunta += "\n\n";
-    pergunta += "*Inativando a vaga ela nï¿½o receberï¿½ mais encaminhamentos e vocï¿½ nï¿½o poderï¿½ alterï¿½-la novamente, ";
+    pergunta += "*Inativando a vaga ela não receberá mais encaminhamentos e Você não poderá alterá-la novamente, ";
     pergunta += "apenas cadastrando uma nova vaga.";
 
     if (confirm(pergunta)) {
@@ -1705,8 +1705,8 @@ function atualizaListaBaixasAutomaticas(id_vaga) {
     $("#tabela_baixas_automaticas").hide();
     $("#tabela_baixas_automaticas_pesq").hide();
 
-    $("#tabela_baixas_automaticas_div").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando baixas automï¿½ticas...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
-    $("#tabela_baixas_automaticas_div_pesq").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando baixas automï¿½ticas...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
+    $("#tabela_baixas_automaticas_div").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando baixas automáticas...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
+    $("#tabela_baixas_automaticas_div_pesq").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando baixas automáticas...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
 
     $.post("../controle/ControleVaga.php?op=pesquisarBaixasAutomaticas", {id_vaga: id_vaga, filtro_codigo: filtro_codigo, filtro_nome: filtro_nome, filtro_status: filtro_status}, function (retorno) {
         window.location.reload();
@@ -1722,8 +1722,8 @@ function atualizaListaPreSelecionados(id_vaga) {
     $("#tabela_pre_selecionados").hide();
     $("#tabela_pre_selecionados_pesq").hide();
 
-    $("#tabela_pre_selecionados_div").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando candidatos prï¿½-selecionados...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
-    $("#tabela_pre_selecionados_div_pesq").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando candidatos prï¿½-selecionados...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
+    $("#tabela_pre_selecionados_div").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando candidatos pré-selecionados...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
+    $("#tabela_pre_selecionados_div_pesq").html("<table width='100%' class='tabela_encaminhados'><tr class='table_formacao_cab'><td>&nbsp;</td></tr><tr class='table_formacao_row'><td style='height: 300px;'><center>Atualizando candidatos pré-selecionados...<br /><br /><i class='fa fa-spinner fa-pulse fa-3x fa-fw font-blue01'></i></center></td></tr></table>");
 
     $.post("../controle/ControleVaga.php?op=pesquisarPreSelecionados", {id_vaga: id_vaga, filtro_codigo: filtro_codigo, filtro_nome: filtro_nome, filtro_status: filtro_status}, function (retorno) {
         window.location.reload();
@@ -1865,7 +1865,7 @@ function profissao_outra() {
 
 function verifica_vazio_profissoes() {
     if (document.getElementById('profissoes').value === "") {
-        alert("Campo em branco, escolha uma ou mais profissï¿½es para concorrer as vagas do banco de oportunidades");
+        alert("Campo em branco, escolha uma ou mais profissões para concorrer as vagas do banco de oportunidades");
         return false;
     }
 }

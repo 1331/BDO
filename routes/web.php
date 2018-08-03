@@ -1,8 +1,9 @@
 <?php
 
 Route::get("testando", function(){
-	dd(\DB::select('select * from bdodsv.empresa'));
+	dd(\DB::select('select * from bdodsv.cidade'));
 });
+
 Route::group(['prefix' => 'bancodeoportunidades'], function() {
 
         Route::get('/',['as' => 'publishing.index', 'uses' => 'PublishingController@index']);

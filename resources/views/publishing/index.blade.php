@@ -16,10 +16,10 @@
 						</div>
 						<div class="div-icones-index">
 							<i class="fa fa-id-card-o fa-4x" aria-hidden="true" title="Total de currículos Cadastrados"></i>
-							<div class='div-numero-index'>{{ $company }}</div>
+							{{-- <div class='div-numero-index'>{{ $curriculum }}</div> --}}
 							Currículos
 						</div>
-						<div class="div-icones-index">
+						<div class="div-icones-index ">
 							<a href="#vagas" class="link-default font-blue01"><i class="fa fa-users fa-4x" aria-hidden="true" title="Total de Vagas Cadastradas"></i></a>
 							<div class='div-numero-index'>{{ $vacancy }}</div>
 							Vagas
@@ -83,7 +83,6 @@
 								</table>
 							</form>
 						</fieldset>
-
 
 					</div>
 

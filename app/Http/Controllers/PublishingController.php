@@ -26,22 +26,23 @@ class PublishingController extends Controller{
 	public function __construct(
 		CompanyRepositoryInterface $companyRepository,
 		VisitRepositoryInterface $visitRepository,
-		VacancyRepositoryInterface $vacancyRepository,
-		CandidateService $candidateService
+		VacancyRepositoryInterface $vacancyRepository
+		// CandidateService $candidateService
 	){
 		$this->companyRepository  = $companyRepository;
 		$this->visitRepository    = $visitRepository;
 		$this->vacancyRepository  = $vacancyRepository;
-		$this->candidateService   = $candidateService;
+		// $this->candidateService   = $candidateService;
     }
 
 	public function index()
     {
 	   $company    = $this->companyRepository->count();
-	   $visit      = substr(strrev( chunk_split($this->visitRepository->count(),3,".")), 1);
+	   $visit      = substr(strrev(chunk_split($this->visitRepository->count(),3,".")), 1);
+	   // $curriculum = json_decode($this->$candidateService->amountCandidate());
+	   // var_dump($this->CandidateService->amountCandidate());exit();
 	   $vacancy    = $this->vacancyRepository->count();
-	   $curriculum = $this->candidateService->count();print_r($vacancyCandidate);exit();
-       return view('publishing.index', compact('company', 'visit','vacancy'));
+       return view('publishing.index', compact('company', 'visit','vacancy','curriculum'));
     }
 }
 ?>

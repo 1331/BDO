@@ -44,7 +44,7 @@ class CandidateService{
         return $result;
     }
 
-    public function amountCandidate(){
+    public function amountCandidate(){ 
         return $this->candidateRepository->count();
     }
 
